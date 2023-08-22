@@ -11,6 +11,7 @@ import 'profile/myAccount.dart';
 import 'carousel.dart';
 import 'fund/fund_account.dart';
 import 'transactions/transactions.dart';
+import 'profile/bvn.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -26,7 +27,8 @@ void main() {
       '/myAccount': (context) => const MyAccount(),
       '/fund': (context) => const Fund(),
       '/cashback': (context) => const Cashback(),
-      '/transactions': (context) => const Transactions()
+      '/transactions': (context) => const Transactions(),
+      '/bvn': (context) => const Bvn()
     },
   ));
 }

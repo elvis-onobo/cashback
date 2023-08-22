@@ -10,9 +10,7 @@ class MyAccount extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.grey[50],
         elevation: 0,
-        iconTheme: IconThemeData(
-            color: Colors.grey[800]
-        ),
+        iconTheme: IconThemeData(color: Colors.grey[800]),
       ),
       body: SafeArea(
         child: SingleChildScrollView(
@@ -22,13 +20,15 @@ class MyAccount extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
-                const Text('My Account',
+                const Text(
+                  'My Account',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 30.0,
                   ),
                 ),
-                const Text('Elvis Onobo',
+                const Text(
+                  'Elvis Onobo',
                   style: TextStyle(
                     fontWeight: FontWeight.normal,
                     fontSize: 20.0,
@@ -36,7 +36,7 @@ class MyAccount extends StatelessWidget {
                 ),
                 const SizedBox(height: 10.0),
                 GestureDetector(
-                  onTap: (){
+                  onTap: () {
                     Navigator.pushNamed(context, '/profile');
                   },
                   child: Card(
@@ -47,11 +47,13 @@ class MyAccount extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: const <Widget>[
-                          Icon(Icons.account_circle_outlined,
+                          Icon(
+                            Icons.account_circle_outlined,
                             size: 20.0,
                           ),
                           SizedBox(width: 10.0),
-                          Text('Profile',
+                          Text(
+                            'Profile',
                             style: TextStyle(
                               fontWeight: FontWeight.normal,
                               fontSize: 20.0,
@@ -64,7 +66,7 @@ class MyAccount extends StatelessWidget {
                 ),
                 const SizedBox(height: 10.0),
                 GestureDetector(
-                  onTap: (){
+                  onTap: () {
                     Navigator.pushNamed(context, '/bvn');
                   },
                   child: Card(
@@ -75,11 +77,13 @@ class MyAccount extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: const <Widget>[
-                          Icon(Icons.numbers_rounded,
+                          Icon(
+                            Icons.numbers_rounded,
                             size: 20.0,
                           ),
                           SizedBox(width: 10.0),
-                          Text('BVN',
+                          Text(
+                            'BVN',
                             style: TextStyle(
                               fontWeight: FontWeight.normal,
                               fontSize: 20.0,
@@ -91,25 +95,55 @@ class MyAccount extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 10.0),
-                Card(
-                  elevation: 2,
-                  color: Colors.white,
-                  child: Padding(
-                    padding: const EdgeInsets.all(25.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: const <Widget>[
-                        Icon(Icons.logout_outlined,
-                          size: 20.0,
-                        ),
-                        SizedBox(width: 10.0),
-                        Text('Logout',
-                          style: TextStyle(
-                            fontWeight: FontWeight.normal,
-                            fontSize: 20.0,
+                GestureDetector(
+                  onTap: () {
+                    showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return AlertDialog(
+                          title: const Text('Logout'),
+                          content: const Text('Are you sure you want to logout?'),
+                          actions: <Widget>[
+                            TextButton(
+                              child: const Text('Cancel'),
+                              onPressed: () {
+                                Navigator.of(context).pop();
+                              },
+                            ),
+                            TextButton(
+                              child: const Text('Logout'),
+                              onPressed: () {
+                                // Perform logout logic here
+                                Navigator.of(context).pop();
+                              },
+                            ),
+                          ],
+                        );
+                      },
+                    );
+                  },
+                  child: Card(
+                    elevation: 2,
+                    color: Colors.white,
+                    child: Padding(
+                      padding: const EdgeInsets.all(25.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: const <Widget>[
+                          Icon(
+                            Icons.logout_outlined,
+                            size: 20.0,
                           ),
-                        )
-                      ],
+                          SizedBox(width: 10.0),
+                          Text(
+                            'Logout',
+                            style: TextStyle(
+                              fontWeight: FontWeight.normal,
+                              fontSize: 20.0,
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ),

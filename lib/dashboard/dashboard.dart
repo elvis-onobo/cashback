@@ -87,7 +87,7 @@ class _DashboardState extends State<Dashboard> {
                 Card(
                   // elevation: 20,
                   child: Container(
-                    height: 200,
+                    height: 150,
                     width: double.infinity,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10.0),
@@ -116,12 +116,12 @@ class _DashboardState extends State<Dashboard> {
                                 children: const [
                                   Icon(Icons.account_balance_wallet,
                                     color: Colors.white,
-                                    size: 30.0,
+                                    size: 20.0,
                                   ),
                                   SizedBox(width: 5.0),
                                   Text('Balance',
                                     style: TextStyle(
-                                      fontSize: 25.0,
+                                      fontSize: 20.0,
                                       color: Colors.white,
                                       fontWeight: FontWeight.bold
                                     ),
@@ -161,7 +161,7 @@ class _DashboardState extends State<Dashboard> {
                                     const SizedBox(height: 15.0),
                                     const Text('Top-Up',
                                       style: TextStyle(
-                                        fontSize: 25,
+                                        fontSize: 20,
                                         fontWeight: FontWeight.bold,
                                       ),
                                     )
@@ -197,7 +197,7 @@ class _DashboardState extends State<Dashboard> {
                                     const SizedBox(height: 15.0),
                                     const Text('Cashback',
                                       style: TextStyle(
-                                        fontSize: 25,
+                                        fontSize: 20,
                                         fontWeight: FontWeight.bold,
                                       ),
                                     )
@@ -234,7 +234,7 @@ class _DashboardState extends State<Dashboard> {
                           Text('Transactions',
                             style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 25.0,
+                                fontSize: 20.0,
                                 fontWeight: FontWeight.normal
                             ),
                           ),

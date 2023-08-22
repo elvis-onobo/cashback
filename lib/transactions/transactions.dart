@@ -35,14 +35,14 @@ class _TransactionsState extends State<Transactions> {
                           Text('12-12-2023',
                             style: TextStyle(
                               fontWeight: FontWeight.normal,
-                              fontSize: 25
+                              fontSize: 20
                             ),
                           ),
                           SizedBox(width: 5.0),
                           Text('12:02PM',
                            style: TextStyle(
                                fontWeight: FontWeight.normal,
-                             fontSize: 25
+                             fontSize: 20
                            ),
                           ),
                         ],
@@ -54,7 +54,7 @@ class _TransactionsState extends State<Transactions> {
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Colors.green,
-                              fontSize: 25,
+                              fontSize: 20,
                             ),
                           ),
                           SizedBox(width: 5.0),
@@ -62,7 +62,7 @@ class _TransactionsState extends State<Transactions> {
                             style: TextStyle(
                                 fontWeight: FontWeight.normal,
                                 color: Colors.green,
-                                fontSize: 25
+                                fontSize: 20
                             ),
                           ),
                         ],
@@ -84,14 +84,14 @@ class _TransactionsState extends State<Transactions> {
                           Text('12-12-2023',
                             style: TextStyle(
                                 fontWeight: FontWeight.normal,
-                                fontSize: 25
+                                fontSize: 20
                             ),
                           ),
                           SizedBox(width: 5.0),
                           Text('12:02PM',
                             style: TextStyle(
                                 fontWeight: FontWeight.normal,
-                                fontSize: 25
+                                fontSize: 20
                             ),
                           ),
                         ],
@@ -104,7 +104,7 @@ class _TransactionsState extends State<Transactions> {
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Colors.red,
-                              fontSize: 25,
+                              fontSize: 20,
                             ),
                           ),
                           SizedBox(width: 5.0),
@@ -112,7 +112,7 @@ class _TransactionsState extends State<Transactions> {
                             style: TextStyle(
                                 fontWeight: FontWeight.normal,
                                 color: Colors.green,
-                                fontSize: 25
+                                fontSize: 20
                             ),
                           ),
                         ],
@@ -134,14 +134,14 @@ class _TransactionsState extends State<Transactions> {
                           Text('12-12-2023',
                             style: TextStyle(
                                 fontWeight: FontWeight.normal,
-                                fontSize: 25
+                                fontSize: 20
                             ),
                           ),
                           SizedBox(width: 5.0),
                           Text('12:02PM',
                             style: TextStyle(
                                 fontWeight: FontWeight.normal,
-                                fontSize: 25
+                                fontSize: 20
                             ),
                           ),
                         ],
@@ -154,7 +154,7 @@ class _TransactionsState extends State<Transactions> {
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Colors.red,
-                              fontSize: 25,
+                              fontSize: 20,
                             ),
                           ),
                           SizedBox(width: 5.0),
@@ -162,7 +162,7 @@ class _TransactionsState extends State<Transactions> {
                             style: TextStyle(
                                 fontWeight: FontWeight.normal,
                                 color: Colors.green,
-                                fontSize: 25
+                                fontSize: 20
                             ),
                           ),
                         ],
@@ -184,14 +184,14 @@ class _TransactionsState extends State<Transactions> {
                           Text('12-12-2023',
                             style: TextStyle(
                                 fontWeight: FontWeight.normal,
-                                fontSize: 25
+                                fontSize: 20
                             ),
                           ),
                           SizedBox(width: 5.0),
                           Text('12:02PM',
                             style: TextStyle(
                                 fontWeight: FontWeight.normal,
-                                fontSize: 25
+                                fontSize: 20
                             ),
                           ),
                         ],
@@ -204,7 +204,7 @@ class _TransactionsState extends State<Transactions> {
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Colors.green,
-                              fontSize: 25,
+                              fontSize: 20,
                             ),
                           ),
                           SizedBox(width: 5.0),
@@ -212,7 +212,7 @@ class _TransactionsState extends State<Transactions> {
                             style: TextStyle(
                                 fontWeight: FontWeight.normal,
                                 color: Colors.green,
-                                fontSize: 25
+                                fontSize: 20
                             ),
                           ),
                         ],
