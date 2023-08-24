@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ringa/cashback/cashback.dart';
 import 'splash.dart';
 import 'auth/login.dart';
 import 'auth/register.dart';
@@ -12,6 +11,8 @@ import 'carousel.dart';
 import 'fund/fund_account.dart';
 import 'transactions/transactions.dart';
 import 'profile/bvn.dart';
+import 'cashback/cashback.dart';
+import 'send/send.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -28,7 +29,8 @@ void main() {
       '/fund': (context) => const Fund(),
       '/cashback': (context) => const Cashback(),
       '/transactions': (context) => const Transactions(),
-      '/bvn': (context) => const Bvn()
+      '/bvn': (context) => const Bvn(),
+      '/send': (context) => const Send()
     },
   ));
 }

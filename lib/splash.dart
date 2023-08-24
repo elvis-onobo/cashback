@@ -17,19 +17,31 @@ class _SplashScreenState extends State<Splash> {
     Timer(
         const Duration(seconds: 2),
             () => Navigator.of(context).pushReplacement(
-            MaterialPageRoute(builder: (BuildContext context) => const Carousel()))
+            MaterialPageRoute(builder: (BuildContext context) => Carousel()))
     );
   }
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        // name the app Rush or Cashback
-        child: Text('Cashback', style: TextStyle(
-            fontSize: 50,
-            fontWeight: FontWeight.bold
-        ),
+    return Scaffold(
+      body: Padding(
+        padding: EdgeInsets.all(8.0),
+        child: Center(
+          // name the app Rush or Cashback
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const [
+              Text('Cashback', style: TextStyle(
+                fontSize: 50,
+                fontWeight: FontWeight.bold,
+              )),
+              SizedBox(height: 10),  // Add spacing between the two Text widgets
+              Text('Reward for Spending', style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.normal,
+              )),
+            ],
+          ),
         ),
       ),
     );

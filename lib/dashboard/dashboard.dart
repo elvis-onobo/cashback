@@ -23,10 +23,10 @@ class _DashboardState extends State<Dashboard> {
             ),
             label: 'Home',
           ),
-          // BottomNavigationBarItem(
-          //   icon: Icon(Icons.list_alt_outlined),
-          //   label: 'Market',
-          // ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.card_giftcard),
+            label: 'Cashback',
+          ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.credit_card_rounded,
@@ -134,7 +134,39 @@ class _DashboardState extends State<Dashboard> {
                     ),
                   ),
                 ),
-                const SizedBox(height: 40.0),
+                const SizedBox(height: 20.0),
+                GestureDetector(
+                  onTap: (){
+                    Navigator.pushNamed(context, '/send');
+                  },
+                  child: Card(
+                    color: const Color(0xff4b4ad6),
+                    // elevation: 20,
+                    child: Padding(
+                      padding: const EdgeInsets.all(20.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const [
+                          Icon(
+                            Icons.send,
+                            color: Colors.white,
+                            size: 20.0,
+                            semanticLabel: 'virtual account',
+                          ),
+                          SizedBox(width: 5.0),
+                          Text('Send',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20.0,
+                                fontWeight: FontWeight.normal
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 20.0),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
@@ -211,7 +243,7 @@ class _DashboardState extends State<Dashboard> {
                     ),
                   ],
                 ),
-                const SizedBox(height: 40.0),
+                const SizedBox(height: 20.0),
                 GestureDetector(
                   onTap: (){
                     Navigator.pushNamed(context, '/transactions');
@@ -220,14 +252,14 @@ class _DashboardState extends State<Dashboard> {
                     color: const Color(0xff4b4ad6),
                     // elevation: 20,
                     child: Padding(
-                      padding: const EdgeInsets.all(30.0),
+                      padding: const EdgeInsets.all(20.0),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: const [
                           Icon(
                             Icons.list_alt_sharp,
                             color: Colors.white,
-                            size: 30.0,
+                            size: 20.0,
                             semanticLabel: 'virtual account',
                           ),
                           SizedBox(width: 5.0),

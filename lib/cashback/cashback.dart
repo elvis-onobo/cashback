@@ -74,53 +74,54 @@ class _CashbackState extends State<Cashback> {
               ),
               const SizedBox(height: 5.0),
               Card(
-                    elevation: 10,
-                    child: Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: <Widget>[
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const <Widget>[
-                              Text('12-12-2023',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.normal,
-                                    fontSize: 20
-                                ),
-                              ),
-                              SizedBox(width: 5.0),
-                              Text('12:02PM',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.normal,
-                                    fontSize: 20
-                                ),
-                              ),
-                            ],
+                elevation: 10,
+                child: Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const <Widget>[
+                          Text('12-12-2023',
+                            style: TextStyle(
+                                fontWeight: FontWeight.normal,
+                                fontSize: 20
+                            ),
                           ),
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: const <Widget>[
-                              Text('200.00',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.green,
-                                  fontSize: 20,
-                                ),
-                              ),
-                              SizedBox(width: 5.0),
-                              Text('Risi Foods',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.normal,
-                                    fontSize: 20
-                                ),
-                              ),
-                            ],
+                          SizedBox(width: 5.0),
+                          Text('12:02PM',
+                            style: TextStyle(
+                                fontWeight: FontWeight.normal,
+                                fontSize: 20
+                            ),
                           ),
                         ],
                       ),
-                    ),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: const <Widget>[
+                          Text('200.00',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.green,
+                              fontSize: 20,
+                            ),
+                          ),
+                          SizedBox(width: 5.0),
+                          Text('Mobil',
+                            style: TextStyle(
+                                fontWeight: FontWeight.normal,
+                                fontSize: 20
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
+                ),
+              ),
               Card(
                     elevation: 10,
                     child: Padding(
