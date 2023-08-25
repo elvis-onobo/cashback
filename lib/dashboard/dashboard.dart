@@ -1,7 +1,5 @@
-import 'package:cashback/cashback/cashback.dart';
-import 'package:cashback/profile/myAccount.dart';
-import 'package:cashback/transactions/transactions.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({Key? key}) : super(key: key);
@@ -52,17 +50,17 @@ class _DashboardState extends State<Dashboard> {
                         onPressed: (){
                           Navigator.pushNamed(context, '/myAccount');
                         },
-                        iconSize: 50,
+                        iconSize: 40,
                         color: const Color(0xFF080f2e),
                         icon: const Icon(
-                            Icons.account_circle
+                            FontAwesomeIcons.circleUser
                         )
                     )
                   ],
                 ),
                 const SizedBox(height: 1.0),
                 Card(
-                  // elevation: 20,
+                  // elevation: 5,
                   child: Container(
                     height: 150,
                     width: double.infinity,
@@ -91,7 +89,7 @@ class _DashboardState extends State<Dashboard> {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: const [
-                                  Icon(Icons.account_balance_wallet,
+                                  Icon(FontAwesomeIcons.wallet,
                                     color: Colors.white,
                                     size: 20.0,
                                   ),
@@ -100,7 +98,7 @@ class _DashboardState extends State<Dashboard> {
                                     style: TextStyle(
                                       fontSize: 20.0,
                                       color: Colors.white,
-                                      fontWeight: FontWeight.bold
+                                      fontWeight: FontWeight.normal
                                     ),
                                   ),
                                 ],
@@ -108,38 +106,6 @@ class _DashboardState extends State<Dashboard> {
                             ),
                           ],
                         )
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 20.0),
-                GestureDetector(
-                  onTap: (){
-                    Navigator.pushNamed(context, '/send');
-                  },
-                  child: Card(
-                    color: const Color(0xff4b4ad6),
-                    // elevation: 20,
-                    child: Padding(
-                      padding: const EdgeInsets.all(20.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
-                          Icon(
-                            Icons.send,
-                            color: Colors.white,
-                            size: 20.0,
-                            semanticLabel: 'virtual account',
-                          ),
-                          SizedBox(width: 5.0),
-                          Text('Send',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 20.0,
-                                fontWeight: FontWeight.normal
-                            ),
-                          ),
-                        ],
-                      ),
                     ),
                   ),
                 ),
@@ -153,8 +119,8 @@ class _DashboardState extends State<Dashboard> {
                           Navigator.pushNamed(context, '/fund');
                         },
                         child: Card(
-                          color: Colors.orange[400],
-                          elevation: 10,
+                          color: Colors.white,
+                          elevation: 5,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -162,22 +128,22 @@ class _DashboardState extends State<Dashboard> {
                               Padding(
                                 padding: const EdgeInsets.all(20.0),
                                 child: Column(
-                                  children: <Widget>[
-                                    Icon(Icons.payments_rounded,
-                                      size: 70,
-                                      color: Colors.orange[900],
+                                  children: const <Widget>[
+                                    Icon(FontAwesomeIcons.moneyBills,
+                                      size: 50,
+                                      color: Color(0xFF080f2e),
                                     ),
-                                    const SizedBox(height: 15.0),
-                                    const Text('Top-Up',
+                                    SizedBox(height: 15.0),
+                                    Text('Top-Up',
                                       style: TextStyle(
                                         fontSize: 20,
-                                        fontWeight: FontWeight.bold,
+                                        color: Color(0xFF080f2e),
+                                        fontWeight: FontWeight.normal,
                                       ),
                                     )
                                   ],
                                 ),
                               ),
-
                             ],
                           ),
                         ),
@@ -186,11 +152,11 @@ class _DashboardState extends State<Dashboard> {
                     Expanded(
                       child: GestureDetector(
                         onTap: (){
-                          Navigator.pushNamed(context, '/cashback');
+                          Navigator.pushNamed(context, '/send');
                         },
                         child: Card(
-                          color: Colors.green[400],
-                          elevation: 10,
+                          color: Colors.white,
+                          elevation: 5,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -198,16 +164,19 @@ class _DashboardState extends State<Dashboard> {
                               Padding(
                                 padding: const EdgeInsets.all(20.0),
                                 child: Column(
-                                  children: <Widget>[
-                                    Icon(Icons.card_giftcard,
-                                      size: 70,
-                                      color: Colors.green[900],
+                                  children:  const <Widget>[
+                                    Icon(
+                                      FontAwesomeIcons.paperPlane,
+                                      color: Color(0xFF080f2e),
+                                      size: 50.0,
+                                      semanticLabel: 'send money',
                                     ),
-                                    const SizedBox(height: 15.0),
-                                    const Text('Cashback',
+                                    SizedBox(height: 15.0),
+                                    Text('Send',
                                       style: TextStyle(
                                         fontSize: 20,
-                                        fontWeight: FontWeight.bold,
+                                        color: Color(0xFF080f2e),
+                                        fontWeight: FontWeight.normal,
                                       ),
                                     )
                                   ],
@@ -221,36 +190,82 @@ class _DashboardState extends State<Dashboard> {
                   ],
                 ),
                 const SizedBox(height: 20.0),
-                GestureDetector(
-                  onTap: (){
-                    Navigator.pushNamed(context, '/transactions');
-                  },
-                  child: Card(
-                    color: const Color(0xff4b4ad6),
-                    // elevation: 20,
-                    child: Padding(
-                      padding: const EdgeInsets.all(20.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
-                          Icon(
-                            Icons.list_alt_sharp,
-                            color: Colors.white,
-                            size: 20.0,
-                            semanticLabel: 'virtual account',
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Expanded(
+                      child: GestureDetector(
+                        onTap: (){
+                          Navigator.pushNamed(context, '/fund');
+                        },
+                        child: Card(
+                          color: Colors.white,
+                          elevation: 5,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: <Widget>[
+                              Padding(
+                                padding: const EdgeInsets.all(20.0),
+                                child: Column(
+                                  children: const <Widget>[
+                                    Icon(FontAwesomeIcons.gifts,
+                                      size: 50,
+                                      color: Color(0xFF080f2e),
+                                    ),
+                                    SizedBox(height: 15.0),
+                                    Text('Cashback',
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                        color: Color(0xFF080f2e),
+                                        fontWeight: FontWeight.normal,
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ],
                           ),
-                          SizedBox(width: 5.0),
-                          Text('Transactions',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 20.0,
-                                fontWeight: FontWeight.normal
-                            ),
-                          ),
-                        ],
+                        ),
                       ),
                     ),
-                  ),
+                    Expanded(
+                      child: GestureDetector(
+                        onTap: (){
+                          Navigator.pushNamed(context, '/cashback');
+                        },
+                        child: Card(
+                          color: Colors.white,
+                          elevation: 5,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: <Widget>[
+                              Padding(
+                                padding: const EdgeInsets.all(20.0),
+                                child: Column(
+                                  children: const <Widget>[
+                                    Icon(FontAwesomeIcons.moneyBillTransfer,
+                                      size: 50,
+                                      color: Color(0xFF080f2e),
+                                    ),
+                                    SizedBox(height: 15.0),
+                                    Text('Transactions',
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                        color: Color(0xFF080f2e),
+                                        fontWeight: FontWeight.normal,
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),

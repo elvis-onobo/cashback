@@ -3,6 +3,7 @@ import 'package:cashback/profile/myAccount.dart';
 import 'package:flutter/material.dart';
 import 'dashboard/dashboard.dart';
 import 'fund/fund_account.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class BottomNavigation extends StatefulWidget {
   const BottomNavigation({Key? key}) : super(key: key);
@@ -40,22 +41,22 @@ class _BottomNavigationState extends State<BottomNavigation> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.home,
+              FontAwesomeIcons.houseChimney,
             ),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.card_giftcard),
+            icon: Icon(FontAwesomeIcons.gifts),
             label: 'Cashback',
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.credit_card_rounded,
+              FontAwesomeIcons.moneyBills,
             ),
             label: 'Top-Up',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person_outline_outlined),
+            icon: Icon(FontAwesomeIcons.circleUser),
             label: 'Account',
           ),
         ],

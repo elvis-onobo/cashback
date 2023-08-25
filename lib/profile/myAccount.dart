@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class MyAccount extends StatelessWidget {
   const MyAccount({Key? key}) : super(key: key);
@@ -48,7 +49,7 @@ class MyAccount extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: const <Widget>[
                           Icon(
-                            Icons.account_circle_outlined,
+                            FontAwesomeIcons.circleUser,
                             size: 20.0,
                           ),
                           SizedBox(width: 10.0),
@@ -78,7 +79,7 @@ class MyAccount extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: const <Widget>[
                           Icon(
-                            Icons.numbers_rounded,
+                            FontAwesomeIcons.hashtag,
                             size: 20.0,
                           ),
                           SizedBox(width: 10.0),
@@ -131,7 +132,7 @@ class MyAccount extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: const <Widget>[
                           Icon(
-                            Icons.logout_outlined,
+                            FontAwesomeIcons.rightFromBracket,
                             size: 20.0,
                           ),
                           SizedBox(width: 10.0),
