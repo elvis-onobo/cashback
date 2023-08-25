@@ -1,3 +1,6 @@
+import 'package:cashback/cashback/cashback.dart';
+import 'package:cashback/profile/myAccount.dart';
+import 'package:cashback/transactions/transactions.dart';
 import 'package:flutter/material.dart';
 
 class Dashboard extends StatefulWidget {
@@ -8,37 +11,11 @@ class Dashboard extends StatefulWidget {
 }
 
 class _DashboardState extends State<Dashboard> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.white,
-        type: BottomNavigationBarType.fixed,
-        selectedItemColor: const Color(0xFF080f2e),
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home,
-            ),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.card_giftcard),
-            label: 'Cashback',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.credit_card_rounded,
-            ),
-            label: 'Transactions',
-          ),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.person_outline_outlined),
-              label: 'Account',
-          ),
-        ],
-      ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(

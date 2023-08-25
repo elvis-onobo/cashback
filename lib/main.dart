@@ -13,6 +13,7 @@ import 'transactions/transactions.dart';
 import 'profile/bvn.dart';
 import 'cashback/cashback.dart';
 import 'send/send.dart';
+import 'bottomNavigation.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -30,7 +31,8 @@ void main() {
       '/cashback': (context) => const Cashback(),
       '/transactions': (context) => const Transactions(),
       '/bvn': (context) => const Bvn(),
-      '/send': (context) => const Send()
+      '/send': (context) => const Send(),
+      '/bottom-navigation': (context) => const BottomNavigation()
     },
   ));
 }

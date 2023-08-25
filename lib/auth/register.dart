@@ -60,7 +60,7 @@ class _RegisterState extends State<Register> {
                   const SizedBox(height: 5.0),
                   ElevatedButton(
                     onPressed: (){
-                      Navigator.pushNamed(context, '/dashboard');
+                      Navigator.pushNamed(context, '/bottom-navigation');
                     },
                     style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xFF080f2e),

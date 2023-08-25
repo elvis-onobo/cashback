@@ -47,7 +47,7 @@ class _LoginState extends State<Login> {
             const SizedBox(height: 8.0),
             ElevatedButton(
               onPressed: (){
-                Navigator.pushNamed(context, '/dashboard');
+                Navigator.pushNamed(context, '/bottom-navigation');
               },
               style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xFF080f2e),
